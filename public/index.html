@@ -1,19 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <h1>X Clone - Feed</h1>
-    <div id="input-container">
-        <input type="text" id="username" placeholder="Enter username (e.g., elonmusk)" />
-        <button onclick="fetchTweets()">Fetch Tweets</button>
+    <div class="container">
+        <div class="left">
+            <div class="left_head">
+                <svg viewBox="0 0 24 24" aria-hidden="true"
+                    class="w-3 logo r-16y2uox r-1nao33i r-4qtqp9 r-8kz0gk r-bnwqim r-dnmrzs r-lrsllp r-lrvibr r-m6rgpd r-yyyyoo">
+                    <g>
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <div class="menu">
+                    <div class="active menu_item">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span>Home</span>
+                    </div>
+                    <div class="menu_item">
+                        <i class="fa-search fas"></i>
+                        <span>Explore</span>
+                    </div>
+                    <div class="menu_item">
+                        <i class="fa-bell fas"></i>
+                        <span>Notifications</span>
+                        <span class="notification">1</span>
+                    </div>
+                    <div class="menu_item">
+                        <i class="fa-envelope fas"></i>
+                        <span>Messages</span>
+                    </div>
+                    <div class="menu_item">
+                        <i class="fa-pen-to-square fas"></i>
+                        <span>Grok</span>
+                    </div>
+                    <div class="menu_item">
+                        <i class="fa-users fas"></i>
+                        <span>Communities</span>
+                    </div>
+                    <div class="menu_item">
+                        <i class="fa-crown fas"></i>
+                        <span>Premium</span>
+                    </div>
+                    <div class="menu_item">
+                        <i class="fa-user fas"></i>
+                        <span>Profile</span>
+                    </div>
+                    <div class="menu_item">
+                        <i class="fa-ellipsis fas"></i>
+                        <span>More</span>
+                    </div>
+                </div>
+        
+                <!-- Post Button -->
+                <div class="post_button">
+                    <button>Post</button>
+                </div>
+        
+                <!-- Profile Section -->
+                <div class="profile_section">
+                    <div class="profile_avatar">A</div>
+                    <div class="profile_details">
+                        <div class="profile_name">Abhishek Sangule</div>
+                        <div class="profile_handle">@AbhishekRDJ</div>
+                    </div>
+                    <div class="profile_more">
+                        <i class="fa-ellipsis fas"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mid"></div>
+        <div class="right"></div>
     </div>
-    <div id="feed"></div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -16,11 +16,10 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
-
 }
 .left {
   /* background-color: rgb(23, 10, 10); */
-  flex: 1;
+  flex: 1.2;
   width: 2%;
   position: sticky;
   top: 0;
@@ -172,11 +171,288 @@ li {
 }
 .mid {
   flex: 2;
-  background-color: blue;
-  
+  /* background-color: blue; */
+  border: 1px solid #2e2e2e;
   overflow-y: auto;
+
   height: 100%;
   width: 411px;
+}
+.mid::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #2f3336;
+  height: 8%;
+
+  font-size: 16px;
+}
+
+.header .tab {
+  padding: 10px 0;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  color: #71767b;
+  font-weight: bold;
+}
+
+.header .tab.active {
+  color: #fff;
+  border-bottom: 3px solid #1da1f2;
+}
+
+/* Post Section */
+.post-section {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-bottom: 1px solid #2f3336;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #f91880;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.post-input {
+  flex: 1;
+}
+
+.input input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+  outline: none;
+}
+.post-sectionfirstRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.post-input input::placeholder {
+  color: #71767b;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  gap: 23px;
+  margin-left: 40px;
+}
+.head_icon {
+  color: #1991da;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.head_icon:hover {
+  cursor: pointer;
+  transform: scale(1.3); /* Pop-out effect */
+  color: #009dff; /* Slightly darker blue on hover */
+}
+
+.icons span img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+.post-button {
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.post-button:hover {
+  background-color: #1991da;
+}
+.post-container {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  border: 1px solid #2f3336;
+  cursor: pointer;
+  padding: 15px;
+  /* border-radius: 10px; */
+  /* max-width: 600px; */
+  margin: auto;
+  /* margin-bottom: 20px; */
+}
+.post-container:hover {
+  background-color: rgba(17, 17, 17, 0.655);
+}
+
+/* Profile Image */
+.profile-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Post Content */
+.post-content {
+  margin-left: 15px;
+  flex: 1;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.user-info strong {
+  font-size: 15px;
+}
+
+.user-info span {
+  color: #6e767d;
+  margin-left: 5px;
+}
+
+.post-text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.post-text a {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.post-text a:hover {
+  text-decoration: underline;
+}
+
+/* Post Footer (Icons) */
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #6e767d;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.post-footer div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.post-footer div:hover {
+  color: #1da1f2;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+/* Video Section */
+.video-container {
+  margin-top: 15px;
+  position: relative;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #2f3336;
+}
+
+.video-container img {
+  width: 100%;
+  height: auto;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 10px;
+}
+.profile-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Ensuring the post text doesn't overflow */
+.post-text {
+  word-wrap: break-word; /* Break long words into the next line */
+  white-space: normal; /* Allow the text to wrap */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Ensure the video takes full width but stays within the container */
+.video-container {
+  position: relative;
+  width: 100%;     /* Ensures the container takes full width */
+  height: 0;       /* Set height to 0 initially to preserve aspect ratio */
+  padding-bottom: 56.25%;  /* For a 16:9 aspect ratio */
+  background-color: black;  /* Optional: makes the background black */
+  overflow: hidden;  /* Prevents content from overflowing */
+}
+
+/* Video specific styling */
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(0deg) scale(1.005);
+  background-color: black;
+  object-fit: cover;  /* Ensures the video covers the entire area */
+}
+
+/* Optional: Play button overlay styling */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
 }
 .right {
   /* background-color: green; */
@@ -230,8 +506,6 @@ li {
 .right2 {
   /* background-color: red; */
 }
-
-
 
 /* Right panel sticky behavior */
 

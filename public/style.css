@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,7 @@
 body {
   background-color: #000;
   color: #fff;
+  overflow-x: hidden;
 }
 .container {
   height: 100vh;
@@ -79,10 +82,10 @@ body {
   font-size: 12px;
   padding: 3px 6px;
 }
-.post_button{
+.post_button {
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
 
 /* Post Button */
@@ -118,10 +121,9 @@ body {
   margin-right: 30px;
   gap: 10px;
 }
-.profile_section:hover{
+.profile_section:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.1);;
-
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .profile_avatar {
@@ -134,13 +136,13 @@ body {
   align-items: center;
   justify-content: center;
 }
-.profile_name{
+.profile_name {
   font-weight: bold;
 }
-.profile_handle{
+.profile_handle {
   color: gray;
 }
-.menu_item{
+.menu_item {
   display: flex;
   align-items: center;
   /* background-color: yellow; */
@@ -166,10 +168,289 @@ li {
 .mid {
   background-color: blue;
   height: 100vh;
-  width: 46%;
+  width: 42%;
 }
 .right {
-  background-color: green;
+  /* background-color: green; */
   height: 100vh;
-  width: 27%;
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  margin-top: 2px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #2e2e2e;
+  border-radius: 20px;
+  padding: 10px 15px;
+  width: 360px;
+  margin-right: 85px;
+}
+
+.search-icon {
+  color: #b0b0b0; /* Light grey icon */
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #b0b0b0; /* Light grey text */
+  font-size: 16px;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: #666; /* Placeholder text color */
+  opacity: 1;
+}
+.right2 {
+  /* background-color: red; */
+}
+.right2_container {
+  /* background-color: blue; */
+  margin: 20px;
+  border: 1px solid #2e2e2e;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 120px;
+
+  min-height: 20%;
+  overflow: hidden;
+  gap: 12px;
+  border-radius: 20px;
+}
+.right2_container3 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.subscribe-btn {
+  background-color: #2196f3; /* Blue background */
+  color: #fff; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px; /* Fully rounded edges */
+  padding: 8px 20px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+}
+
+.subscribe-btn:hover {
+  background-color: #1e88e5; /* Slightly darker blue on hover */
+  transition: background-color 0.3s ease;
+}
+.right2_container2 p {
+  color: #aaacac;
+}
+.right3{
+  /* background-color: red; */
+  width: 100%;
+}
+.trending-panel {
+  background-color: transparent; /* Dark panel background */
+  /* background-color: rebeccapurple; */
+  margin-left: 20px;
+  border-radius: 12px;
+  width: 340px;
+  padding: 15px;
+  border: 1px solid #2e2e2e;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  
+}
+
+/* Section title */
+.trending-panel h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Each trending item */
+.trending-item {
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.trending-item:hover {
+  background-color: #25282e; /* Darker hover background */
+}
+.trending-item_flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Trending category */
+.category {
+  font-size: 12px;
+  color: #6e767d;
+}
+
+/* Trend title */
+.trend-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #d9d9d9;
+}
+
+/* Post count */
+.post-count {
+  font-size: 13px;
+  color: #6e767d;
+}
+
+/* Show more link */
+.show-more a {
+  color: #1d9bf0; /* Twitter blue link */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.show-more a:hover {
+  text-decoration: underline;
+}
+.follow-panel {
+  background-color: transparent; /* Dark panel background */
+  border-radius: 12px;
+  width: 340px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2e2e2e;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* Section title */
+.follow-panel h2 {
+  margin: 0 0 15px 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Follow item */
+.follow-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.follow-item:hover {
+  background-color: #25282e; /* Hover effect */
+}
+
+/* Profile picture */
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* User details */
+.follow-details {
+  flex: 1;
+}
+
+.username {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  color: #d9d9d9;
+}
+
+.handle {
+  font-size: 13px;
+  color: #6e767d;
+}
+
+/* Verified icon */
+.verified {
+  width: 12px;
+  height: 12px;
+}
+
+/* Follow button */
+.follow-button {
+  background-color: #eff3f4;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.follow-button:hover {
+  background-color: #d7dbdc;
+}
+
+/* Show more link */
+.show-more a {
+  color: #1d9bf0; /* Twitter blue */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.show-more a:hover {
+  text-decoration: underline;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 15px;
+  font-size: 13px;
+  color: #6e767d;
+  text-align: center;
+  width: 330px;
+  padding: 15px;
+  margin-left: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Footer links */
+.footer a {
+  color: #6e767d;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  font-size: 12px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #d9d9d9; /* Slightly brighter gray on hover */
+}
+
+/* Footer text (non-link items) */
+.footer span {
+  color: #6e767d;
 }
